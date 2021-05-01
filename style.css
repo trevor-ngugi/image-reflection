@@ -1,0 +1,35 @@
+.bg{
+    background-image: url(ucl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    position: relative;
+    height: 60vh;
+    width: 80vw;
+    margin: 50px auto;
+}
+
+.bg::after{
+    background-image: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    position:absolute;
+    bottom: -100%;
+    content:'' ;
+    width: inherit;
+    height: inherit;
+    transform: rotateX(180deg);
+
+}
+
+.bg::before{
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.2),#ffff 60%,#ffff);
+    content: '';
+    position: absolute;
+    bottom: -101%;
+    height: inherit;
+    width: inherit;
+    z-index: 100;
+}
